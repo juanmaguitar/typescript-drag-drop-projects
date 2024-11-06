@@ -5,11 +5,12 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "lite-server",
-    "dev": "tsc --watch & lite-server",
-    "build": "tsc",
+    "copy:dist": "copyfiles -u 1 'src/*.{html,css}' dist",
+    "start": "tsc && npm run copy:dist && lite-server --baseDir=dist",
+    "dev": "npm run copy:dist && concurrently \"tsc --watch\" \"lite-server --baseDir=dist\"",
+    "build": "tsc && npm run copy:dist",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --dest $(git rev-parse --abbrev-ref HEAD)"
   },
   "keywords": [
     "typescript",
@@ -17,10 +18,10 @@
   ],
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^8.0.0",
+    "copyfiles": "^2.4.1",
     "lite-server": "^2.5.4",
-    "typescript": "^5.6.3"
-  },
-  "dependencies": {
+    "typescript": "^5.6.3",
     "gh-pages": "^6.2.0"
   }
 }
