@@ -3,7 +3,7 @@ export enum ProjectStatus {
   Finished = "finished",
 }
 
-export default class Project {
+export class Project {
   constructor(
     public id: string,
     public title: string,

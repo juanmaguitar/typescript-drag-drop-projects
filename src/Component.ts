@@ -1,7 +1,4 @@
-export default abstract class Component<
-  T extends HTMLElement,
-  U extends HTMLElement
-> {
+export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
   /** Template element for the project list structure */
   templateElement: HTMLTemplateElement;
   /** Root element where project list will be inserted */

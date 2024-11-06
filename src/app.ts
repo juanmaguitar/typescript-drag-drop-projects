@@ -1,6 +1,6 @@
-import ProjectState from "./ProjectState";
-import ProjectList from "./ProjectList";
-import ProjectInput from "./ProjectInput";
+import { ProjectState } from "./ProjectState";
+import { ProjectList } from "./ProjectList";
+import { ProjectInput } from "./ProjectInput";
 import { ProjectStatus } from "./Project";
 
 const projectState = ProjectState.getInstance();
