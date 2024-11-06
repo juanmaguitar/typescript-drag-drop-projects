@@ -1,9 +1,8 @@
+// Component Base Class
+
 export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
-  /** Template element for the project list structure */
   templateElement: HTMLTemplateElement;
-  /** Root element where project list will be inserted */
   hostElement: T;
-  /** The main section element for this project list */
   element: U;
 
   constructor(
@@ -25,15 +24,13 @@ export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
     if (newElementId) {
       this.element.id = newElementId;
     }
+
     this.attach(insertAtStart);
   }
 
-  /**
-   * Attaches the project list section to the DOM
-   */
-  private attach(insertAtBeginning: boolean = false) {
+  private attach(insertAtBeginning: boolean) {
     this.hostElement.insertAdjacentElement(
-      insertAtBeginning ? "afterbegin" : "beforeend",
+      insertAtBeginning ? 'afterbegin' : 'beforeend',
       this.element
     );
   }

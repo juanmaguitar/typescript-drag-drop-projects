@@ -1,10 +1,6 @@
-import { ProjectState } from "./ProjectState";
-import { ProjectList } from "./ProjectList";
-import { ProjectInput } from "./ProjectInput";
-import { ProjectStatus } from "./Project";
+import { ProjectInput } from './components/project-input.js';
+import { ProjectList } from './components/project-list.js';
 
-const projectState = ProjectState.getInstance();
-
-new ProjectInput(projectState);
-new ProjectList(ProjectStatus.Active, projectState);
-new ProjectList(ProjectStatus.Finished, projectState);
+new ProjectInput();
+new ProjectList('active');
+new ProjectList('finished');
