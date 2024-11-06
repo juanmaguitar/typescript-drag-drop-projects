@@ -13,7 +13,7 @@ This repository contain several versions of the same project, each one with a di
 
 [![See online](https://img.shields.io/badge/see_online-vite_bundle-blue)](https://juanmaguitar.github.io/typescript-drag-drop-projects/vite-bundle/) [![See online](https://img.shields.io/badge/see_online-namespaces-blue)](https://juanmaguitar.github.io/typescript-drag-drop-projects/namespaces/) [![See online](https://img.shields.io/badge/see_online-esm-blue)](https://juanmaguitar.github.io/typescript-drag-drop-projects/esm/)
 
-The [`main`](https://github.com/juanmaguitar/typescript-drag-drop-projects/tree/main) branch contains the latest version of the project using Vite to bundle the project for production.
+The [`main`](https://github.com/juanmaguitar/typescript-drag-drop-projects/tree/main) branch contains the latest version of the project.
 
 ## Features
 
@@ -23,9 +23,6 @@ The [`main`](https://github.com/juanmaguitar/typescript-drag-drop-projects/tree/
 - Component-based architecture
 - State management using singleton pattern
 - TypeScript interfaces and type safety
-- **AMD module system with single bundle output** to:
-  - _Development Mode_: split files and coordinate them using `namespace`
-  - _Production Mode_: Bundling a unique file at `dist/bundle.js`
 
 ## Project Structure
 
