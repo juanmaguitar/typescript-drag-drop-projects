@@ -1,7 +1,7 @@
 import { validate, autobind } from "./utils";
 import type { Validatable } from "./utils";
-import Component from "./Component";
-import ProjectState from "./ProjectState";
+import { Component } from "./Component";
+import { ProjectState } from "./ProjectState";
 
 /**
  * ProjectInput Class
@@ -9,10 +9,7 @@ import ProjectState from "./ProjectState";
  * Handles the creation and management of the project input form.
  * Allows users to input project details and validates the input before submission.
  */
-export default class ProjectInput extends Component<
-  HTMLDivElement,
-  HTMLFormElement
-> {
+export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
   /** Input field for project title */
   titleInputElement!: HTMLInputElement;
   /** Input field for project description */

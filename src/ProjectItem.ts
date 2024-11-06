@@ -1,9 +1,9 @@
-import Component from "./Component";
-import Project from "./Project";
+import { Component } from "./Component";
+import { Project } from "./Project";
 import type { Draggable, DragTarget } from "./DragAndDrop";
 import { autobind } from "./utils";
 
-export default class ProjectItem
+export class ProjectItem
   extends Component<HTMLUListElement, HTMLLIElement>
   implements Draggable
 {

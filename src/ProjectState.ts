@@ -1,4 +1,4 @@
-import Project from "./Project";
+import { Project } from "./Project";
 import { ProjectStatus } from "./Project";
 
 interface Listener<T> {
@@ -15,7 +15,7 @@ class State<T> {
  * Class responsible for managing the state of projects in the application.
  * Implements the Singleton pattern to ensure only one instance exists.
  */
-export default class ProjectState extends State<Project> {
+export class ProjectState extends State<Project> {
   /** Array of project objects */
   private projects: Project[] = [];
 

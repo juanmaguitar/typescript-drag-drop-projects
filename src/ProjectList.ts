@@ -1,16 +1,17 @@
-import ProjectState from "./ProjectState";
-import Project, { ProjectStatus } from "./Project";
-import Component from "./Component";
-import ProjectItem from "./ProjectItem";
+import { ProjectState } from "./ProjectState";
+import { Project, ProjectStatus } from "./Project";
+import { Component } from "./Component";
+import { ProjectItem } from "./ProjectItem";
 import { DragTarget } from "./DragAndDrop";
 import { autobind } from "./utils";
+
 /**
  * ProjectList Class
  *
  * Manages the rendering and display of project lists (either active or finished projects)
  * in the application UI.
  */
-export default class ProjectList
+export class ProjectList
   extends Component<HTMLDivElement, HTMLElement>
   implements DragTarget
 {
