@@ -3,19 +3,27 @@
   "version": "1.0.0",
   "description": "Understanding TypeScript Course Setup",
   "main": "app.js",
-  "type": "module",
   "scripts": {
-    "copy:dist": "copyfiles -u 1 'src/*.{html,css}' dist",
-    "start": "tsc && npm run copy:dist && lite-server --baseDir=dist",
-    "dev": "npm run copy:dist && concurrently \"tsc --watch\" \"lite-server --baseDir=dist\"",
-    "build": "tsc && npm run copy:dist",
+    "start": "npm run dev",
+    "dev": "webpack serve --mode development --open",
+    "build": "webpack --config webpack.config.prod.js",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --dest $(git rev-parse --abbrev-ref HEAD)"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^8.0.0",
     "copyfiles": "^2.4.1",
+    "css-loader": "^7.1.2",
+    "gh-pages": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
     "lite-server": "^2.5.4",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
     "typescript": "^5.6.3",
-    "gh-pages": "^6.2.0"
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
